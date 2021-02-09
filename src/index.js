@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
