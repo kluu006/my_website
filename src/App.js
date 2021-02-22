@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import { Fragment } from 'react';
+import React from 'react';
 
 function My_name(props){
   return <h1 style={{fontWeight: 'bold', color: 'cyan'}} >{props.name}'s Website</h1>;
@@ -31,6 +32,19 @@ function Games(props){
     );
 }
 
+
+function Main_page(props){
+  return(
+    <Fragment>
+
+      <button style="background-color: red;" type="button"> programming </button>
+      <button style="background-color: blue;" type="button"> gaming </button>
+      <button style="background-color: green;" type="button"> traveling </button>
+
+    </Fragment>
+  );
+}
+
 function App() {
   const Style={
     backgroundImage: `url(${duck})`,
@@ -46,7 +60,6 @@ function App() {
           <Route path='/' exact />
         </Switch>
       </Router>
-      <My_name name="Kenny Luu" />
       <header className="App-header">
         <img src={duck} className="App-logo" alt="logo" />
         <img src={yep} className="Yep-logo" alt="logo" />
@@ -55,6 +68,7 @@ function App() {
         <Games game="Path of Exile" years='2' />
         <Games game="League of Legends" years='10' />
         <a href={resume}>Click to view my resume.</a>
+        <Main_page />
       </header>
     </div>
   );
