@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import duck from './duck.jpg';
 import yep from './yep.jpg';
-import resume from './Kenny_Luu_Resume.pdf';
 import './App.css';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -77,13 +75,7 @@ function Home() {
     backgroundPosition : 'fixed'
   };
   return (
-    <div className="App" style={Style}>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/' exact />
-        </Switch>
-      </Router>
+    <div className="App">
       <header className="App-header">
         <img src={duck} className="App-logo" alt="logo" />
         <img src={yep} className="Yep-logo" alt="logo" />
@@ -91,7 +83,6 @@ function Home() {
         <a className="App-link"> :^) </a>
         <Games game="Path of Exile" years='2' />
         <Games game="League of Legends" years='10' />
-        <a href={resume}>Click to view my resume.</a>
         <Main_page />
       </header>
     </div>
